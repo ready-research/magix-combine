@@ -30,8 +30,8 @@ let tmplL3 = require('./tmpl-l3');
 let consts = require('./util-const');
 //let tmplDecode = require('./tmpl-decode');
 
-let commentReg = /<!--[\s\S]*?-->/g;
-let htmlCommentCelanReg = /<!--[\s\S]*?-->/g;
+let commentReg = /<!--(?:(?!<!--[\s\S])*?)-->/g;
+let htmlCommentCelanReg = /<!--(?:(?!<!--[\s\S])*?)-->/g;
 let tmplVarsReg = /:(const|global|updateby)\[([^\[\]]*)\]/g;
 let artEngineReg = /:art(?:\s*=\s*(true|false))?(?:$|:)/;
 let sep = path.sep;
